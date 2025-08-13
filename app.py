@@ -22,7 +22,8 @@ if not BACKEND_API_KEY:
 genai.configure(api_key=GEMINI_API_KEY)
 
 CORS(app, resources={r"/*": {"origins": [
-    "https://translation-web-app-frontend.vercel.app/"
+    "https://translation-web-app-frontend.vercel.app",
+    "http://localhost:3000"
 ]}})
 
 # Decorator to require API key authentication
